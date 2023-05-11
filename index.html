@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>Gmail Clone</title>
+    <link rel = "icon" type = "image/x-icon" href = "images/gmail-favicon.png">
+    <style>
+
+        body{
+
+            background-color: #F6F8FC;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        img{
+            mix-blend-mode: multiply;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id = "main-body-container">
+    
+        <div id = "main-navbar">
+
+            <div id = "gmail-icon">
+
+                <div id = "hamburger-menu" class = "pointer">
+
+                    <img src = "images/hamburger_menu.PNG" style = "width: 24px; height: 24px;">
+
+                </div>
+
+                <img class = "pointer" src = "images/Gmail-Emblem.png" style = "width: 109px; height: 40px;">
+
+            </div>
+            
+            <div id = "search-mail">
+
+                <div id = "search-input-container">
+
+                    <form id = "search-form">
+                    
+                        <div class = "search-button">
+
+                            <img src = "images/search_icon.png" style = "width: 17.5px; height: 17.5px;">
+
+                        </div>
+
+                        <input id = "search-input" type = "text" style = "width:568px;" placeholder="Search Mail">
+
+                        <div class = "search-button">
+
+                            <img src = "images/filter-icon.png" style = "width: 17.5px; height: 17.5px;">
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <div id = "other-icons">
+
+                    <div class = "other-flex-icon pointer">
+                        <img src = "images/help-icon.png">
+                    </div>
+
+                    <div class = "other-flex-icon pointer">
+                        <img src = "images/settings-icon.png">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id = "right-icons">
+
+                <div class = "other-flex-icon pointer">
+                    <img src = "images/apps-icon.webp">
+                </div>
+
+                <div class = "other-flex-icon pointer" style = "width: 40px; height: 40px;">
+                    <img src = "images/account_icon.PNG" style = "width: 32px; height: 32px;">
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id = "mail-container">
+
+            <div id = "sidebar">
+
+                <div id = "compose">
+
+                    <div id = "compose-container">
+
+                        <div class = "compose pointer">
+
+                            <div class = "pencil">
+                                <img src = "images/pencil-logo.png" style = "width: 20px; height: 20px;">
+                            </div>
+
+                            <div class = "compose-text"?>
+                                Compose
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id = sidebar-links-container>
+
+                    <div class = "sidebar-links pointer" style = "background-color: #D3E3FD;">
+
+                        <a href = "">
+                            <div class = "side-image">
+                                <img src = "images/gallery-image.png" style = "width: 20px; height: 20px;">
+                            </div>    
+                        </a>
+
+                        <div class = "inbox">
+
+                            <span style = "font-size: 14px; font-weight: bold;">Inbox</span>
+
+                            <span style = "font-size: 12px; font-weight: bold;">2286</span>
+
+                        </div>
+ 
+                    </div>
+
+                    <div class = "sidebar-links pointer">
+
+                        <a href = "">
+                            <div class = "side-image">
+                                <img src = "images/star-logo.png" style = "width: 20px; height: 20px;">
+                            </div>    
+                        </a>
+
+                        <div class = "inbox">
+
+                            <span style = "font-size: 14px;">Starred</span>
+
+                        </div>
+ 
+                    </div>
+
+                    <div class = "sidebar-links pointer">
+
+                        <a href = "">
+                            <div class = "side-image">
+                                <img src = "images/clock-logo.jpg" style = "width: 20px; height: 20px;">
+                            </div>    
+                        </a>
+
+                        <div class = "inbox">
+
+                            <span style = "font-size: 14px;">Snoozed</span>
+
+                        </div>
+ 
+                    </div>
+
+                    <div class = "sidebar-links pointer">
+
+                        <a href = "">
+                            <div class = "side-image">
+                                <img src = "images/send-logo.png" style = "width: 20px; height: 20px;">
+                            </div>    
+                        </a>
+
+                        <div class = "inbox">
+
+                            <span style = "font-size: 14px;">Sent</span>
+
+                        </div>
+ 
+                    </div>
+
+                    <div class = "sidebar-links pointer">
+
+                        <a href = "">
+                            <div class = "side-image">
+                                <img src = "images/draft-logo.png" style = "width: 20px; height: 20px;">
+                            </div>    
+                        </a>
+
+                        <div class = "inbox">
+
+                            <span style = "font-size: 14px; font-weight: bold;">Drafts</span>
+
+                            <span style = "font-size: 12px; font-weight: bold;">2</span>
+
+                        </div>
+ 
+                    </div>
+
+                    <div class = "sidebar-links pointer">
+
+                        <a href = "">
+                            <div class = "side-image">
+                                <img src = "images/down-arrow.png" style = "width: 20px; height: 20px;">
+                            </div>    
+                        </a>
+
+                        <div class = "inbox">
+
+                            <span style = "font-size: 14px;">More</span>
+
+                        </div>
+ 
+                    </div>
+
+                    <div id = "labels">
+
+                        <div class = "label">
+
+                            <span style = "font-weight: bold;">Labels</span>
+
+                        </div>
+
+                        <div class = "addon-images pointer" style = "width: 30px; height: 30px;">
+                            <img src = "images/plus-icon-black-2.png">
+                        </div>
+
+                    </div>
+
+                    <div class = "sidebar-links pointer" style = "margin-top: 5px;">
+
+                        <a href = "">
+                            <div class = "side-image">
+                                <img src = "images/notes.PNG" style = "width: 20px; height: 20px;">
+                            </div>    
+                        </a>
+
+                        <div class = "inbox">
+
+                            <span style = "font-size: 14px;">Notes</span>
+
+                        </div>
+ 
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id = "main-email-section">
+
+                <div id = "title-section">
+
+                    <div class = "title-content">
+
+                        <div class = "title-flex-1">
+
+                            <div id = "square-container" class = "pointer">
+
+                                <img src = "images/shape_square.png" style = "width: 20px; height: 20px;">
+
+                            </div>
+
+                            <div id = "down-arrow-container" class = "pointer">
+
+                                <img src = "images/dropdown.png" style = "width: 10px; height: 10px;">
+
+                            </div>
+
+                            <div class = "refresh-container pointer">
+
+                                <img src = "images/refresh.png" style = "width: 15px; height: 15px;">
+
+                            </div>
+
+                            <div class = "refresh-container pointer">
+
+                                <img src = "images/3dots.png" style = "width: 15px; height: 15px;">
+
+                            </div>
+
+                        </div>
+
+                        <div class = "title-flex-2">
+
+                            <div id = "span-container" class = "pointer">
+                                <span style = "font-size: 12px; color: grey;">1-50 of 3,222</span>
+                            </div>
+
+                            <div class = "refresh-container pointer">
+
+                                <img src = "images/left-arrow.png" style = "width: 10px; height: 10px">
+
+                            </div>
+
+                            <div class = "refresh-container pointer">
+
+                                <img src = "images/right-arrow.png" style = "width: 10px; height: 10px">
+
+                            </div>
+
+                            <div id = "square-container" class = "pointer">
+
+                                <img src = "images/keyboard.png" style = "width: 20px; height: 20px;">
+
+                            </div>
+
+                            <div id = "down-arrow-container" class = "pointer">
+
+                                <img src = "images/dropdown.png" style = "width: 10px; height: 10px;">
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id = "email-header">
+
+                    <div class = "email-header-items pointer" id = "primary">
+
+                        <div id = "primary-image">
+
+                            <img src = "images/gallery-image.png" style = "width: 20px; height: 20px;">
+
+                        </div>
+
+                        <div id = "primary-text">
+
+                            <span style = "color: blue; margin-left: 5px;">Primary</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-header-items pointer">
+
+                        <div id = "primary-image">
+
+                            <img src = "images/promotions.PNG" style = "width: 20px; height: 20px;">
+
+                        </div>
+
+                        <div id = "primary-text">
+
+                            <span style = "margin-left: 5px;">Promotions</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-header-items pointer">
+
+                        <div id = "primary-image">
+
+                            <img src = "images/social.PNG" style = "width: 25px; height: 20px;">
+
+                        </div>
+
+                        <div id = "primary-text">
+
+                            <span style = "margin-left: 10px;">Social</span>
+
+                        </div>                        
+
+                    </div>
+
+                </div>
+
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span>Udemy Instructor: D.</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">I Need Your Help! - <span style = "color: #5F6368; font-weight: normal;">
+                            New Educational Announcement Hi Mba-Atanga, an announcement has
+                            been made from Dr. Angela, instruc...</span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text time">
+
+                        <span class = "bold">1:00 PM</span>
+
+                    </div>
+
+                </div>
+
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">Quora Digest</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">Is it worth sacrificing everything to become a software developer?
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            No, not even slightly. You're thinking of Zuck and Gates...</span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">11:22 PM</span>
+
+                    </div>
+
+                </div>
+
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">LinkedIn</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">2 people have accepted your invitation to connect
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            See David's and other people's connections, experience, and more Links...</span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">7:24 AM</span>
+
+                    </div>
+
+                </div>
+
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">LinkedIn Job Alerts</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">"frontend developer": 30+ opportunities
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            Frontend Developer and other roles available
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">2:55 AM</span>
+
+                    </div>
+
+                </div>
+
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">Apple</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">Billing Problem
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            Billing Problem Apple Music Individual(1 month) US$3.29/month
+                            Billing Problem Dear JUDE AGHEDSEH,the...</span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">Apr 27</span>
+
+                    </div>
+
+                </div>
+
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">Pond5</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">King Charles III Coronation, Smartphone Filming Guide, Eurovision, Top Stock Music Websites
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            Dive into archival exclus...</span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">Apr 27</span>
+
+                    </div>
+
+                </div>
+
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">Google Tips & Updt</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">Mba, customize how to connect, with Google
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            Stay connected with these tips for Photos, Meet and more
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;...</span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">Apr 27</span>
+
+                    </div>
+
+                </div>
+
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">Stack Overflow</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">The Overflow #175: The coding school that bought a university
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            Communities on Teams, mathematical serendipity, and No...</span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">Apr 27</span>
+
+                    </div>
+
+                </div>
+                
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">Quora Digest</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">Why are experienced programmers leaving the industry?
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            Really GOOD programmers are rare. As such, when a company fi...</span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">Apr 27</span>
+
+                    </div>
+
+                </div>
+
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">Simplilearn</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">3 Days, Unlimited Certificates. Go
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            Don't let this offer fly away SIGN UP NOW Hi Mba, In case you missed our previous mail...</span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">Apr 27</span>
+
+                    </div>
+
+                </div>
+
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">LinkedIn Job Alerts</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">"software tester": 3 opportunities
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            Software Development Tester/ Analyst Interest rate Derivatives and other roles are availa...</span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">Apr 27</span>
+
+                    </div>
+
+                </div>  
+
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">Quora Digest</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">Is 40 too old to learn front end web development and have a viable career for at leas...?
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            40 isn't too old, but I'd have sec...</span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">Apr 27</span>
+
+                    </div>
+
+                </div>
+
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">Nelson Ole Reiyia</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">Because you helped before
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            I'm a Maasai elder in Kenya. The miracle you helped create is in danger. Avaaz usually sends a...</span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">Apr 27</span>
+
+                    </div>
+
+                </div>
+
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">GDG Event Plat.</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">GDG Bamenda & Propel Partnership Alert!
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            Google Developer Groups - GDG Bamenda View in browser Hello, Mba, GDG...</span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">Apr 26</span>
+
+                    </div>
+
+                </div>
+
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">Pond5</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">How to Pay Less When Buying Stock Media
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            Whether you pay as you go or budget ahead-get unbeatable value and flexibilit...</span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">Apr 26</span>
+
+                    </div>
+
+                </div>
+
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">Apple</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">Your Apple ID information has been updated
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            Your Apple ID information has been updated. Dear JUDE AGHEDSEH MBA-AT...</span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">Apr 26</span>
+
+                    </div>
+
+                </div>
+
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">Quora Digest</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">What is the darkest part of a software engineer's career?
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            You are 25, making 170K USD or whatever. You take a fresh exc...</span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">Apr 26</span>
+
+                    </div>
+
+                </div>
+
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">LinkedIn Job Alerts</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">"software tester":1 opportunity 
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            Software Tester (ETL) and other roles are available </span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">Apr 26</span>
+
+                    </div>
+
+                </div>
+
+                
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">LinkedIn Job Alerts</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">"frontend developer" :3 opportunities 
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            Frontend Developer and other roles are available </span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">Apr 26</span>
+
+                    </div>
+
+                </div>
+
+                
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">LinkedIn Job Alerts</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">"frontend developer" :8 opportunities 
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            Frontend Developer and other roles are available </span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">Apr 26</span>
+
+                    </div>
+
+                </div>
+
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">Simplilearn</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">Free Webinar Alert: AI & ML Career Overview 
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            Hurry Up limited seats available || Register Now REGISTER FOR FREE Hi M... </span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">Apr 26</span>
+
+                    </div>
+
+                </div>
+
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">LinkedIn Job Alerts</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">"frontend developer" :3 opportunities 
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            Frontend Developer and other roles are available </span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">Apr 26</span>
+
+                    </div>
+
+                </div>
+
+                
+                <div class = "email-container pointer">
+
+                    <div id = "primary-section">
+
+                        <div class = "email-square-container">
+
+                            <img class = "email-square" src = "images/shape_square.png">
+
+                        </div>
+
+                        <div class = "email-square-container" id = "star-icon">
+
+                            <img class = "email-square" src = "images/star-logo.png">
+
+                        </div>
+
+                        <div class = "email-text" id = "theme">
+
+                            <span class = "bold">Quora Digest</span>
+
+                        </div>
+
+                    </div>
+
+                    <div id = "main-emails">
+
+                        <div class = "email-text" id = "email-content">
+
+                            <span class = "bold">What is the biggest no-no when you are a software engineer? 
+                                - <span style = "color: #5F6368; font-weight: normal;">
+                            What is the biggest no-no when you are a software engineer? </span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "email-text">
+
+                        <span class = "bold time">Apr 26</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id = "addons-section">
+
+                <div class = "addon-items">
+
+                    <div class = "addon-images pointer">
+                        <img src = "images/Google_Calendar_icon_(2020).svg.png">
+                    </div>
+
+                </div>
+
+                <div class = "addon-items">
+
+                    <div class = "addon-images pointer">
+                        <img src = "images/google-keep.png">
+                    </div>
+
+                </div>
+
+                <div class = "addon-items">
+
+                    <div class = "addon-images pointer">
+                        <img src = "images/Google_Tasks_2021.svg.png">
+                    </div>
+
+                </div>
+
+                <div class = "addon-items">
+
+                    <div class = "addon-images pointer">
+                        <img src = "images/Google_Contacts_logo.png">
+                    </div>
+
+                </div>
+
+                <div class = "addon-items">
+
+                    <div id = "border-line">
+
+                    </div>
+
+                </div>
+
+                <div class = "addon-items">
+
+                    <div class = "addon-images pointer">
+                        <img src = "images/plus-icon-black-2.png">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
